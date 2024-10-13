@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woody</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <section class="navbar">
+      <div class="left-navbar">
+        <div>
+          <i class="fa fa-map-marker first-icon"></i>
+          <!-- <i class="fa-thin fa-location-dot first-icon"></i> -->
+          <span> 123 Street, NewYork, USA</span>
+        </div>
+        <div class="left-margin">
+          <i class="far fa-clock text-primary first-icon"></i>
+          <span> Mon - Fri 9:00 AM - 09:00 PM</span>
+        </div>
+      </div>
+      <div class="right-navbar">
+        <div>
+          <i class="fa fa-phone-alt text-primary first-icon"></i>
+          <span> +92305 6761558 </span>
+        </div>
+        <div class="left-margin">
+          <a class="first-icon social" href=""
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a class="first-icon social" href=""
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a class="first-icon social" href=""
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a class="first-icon social" href=""
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero section -->
+
+    <section class="hero">
+      <div class="left-hero">
+        <h1>WooDY</h1>
+      </div>
+      <div class="right-hero">
+        <a href="/home.html" class="hero-link">HOME</a
+        ><a href="/about.html" class="hero-link">ABOUT</a
+        ><a href="/services.html" class="hero-link">SERVICE</a
+        ><a href="/projects.html" class="hero-link">PROJECT</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">
+            PAGES <i class="fa fa-arrow-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">features</a>
+            <a href="#">free Quote</a>
+            <a href="#">Our Team</a>
+            <a href="#">Testimonial</a>
+            <a href="#">404 Pages</a>
+          </div>
+        </div>
+        <a href="/projects.html" class="nav-middle-link">CONTACT </a>
+      </div>
+      <a href="/projects.html" class="quote"
+        >Get A Qoute <i class="fa fa-arrow-right"></i>
+      </a>
+    </section>
+    <!-- hero end -->
+
+    <section class="slider">
+      <div class="slider-content">
+        <h3>WELCOME TO WOODY</h3>
+        <h1>Best Carpenter & Craftsman Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nobis
+          eaque excepturi iusto vitae dolorem illo, illum quae voluptatibus
+          dolores! Culpa, consectetur dolorum!
+        </p>
+        <button class="slider-btn left-button">Read More</button>
+        <button class="slider-btn right-button">Free Quote</button>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">1 / 3</div> -->
+          <img src="./assests/carousel-1.jpg" style="width: 100%" />
+          <!-- <div class="text">Caption Text</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">2 / 3</div> -->
+          <img src="./assests/carousel-2.jpg" style="width: 100%" />
+          <!-- <div class="text">Caption Two</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">3 / 3</div> -->
+          <img src="./assests/carousel-3.jpg" style="width: 100%" />
+          <!-- <div class="text">Caption Three</div> -->
+        </div>
+
+        <div style="text-align: center" class="arrows">
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+      </div>
+      <br />
+    </section>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
