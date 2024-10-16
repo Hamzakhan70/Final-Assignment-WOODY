@@ -244,6 +244,7 @@ select {
   animation-name: hero-button-left;
   animation-duration: 1.5s;
   animation-timing-function: ease;
+  /* animation-timeline: view(); */
 }
 .right-button {
   background-color: #fffcfa;
@@ -496,4 +497,89 @@ select {
 .digit {
   color: var(--primary);
   letter-spacing: 1px;
+}
+.right-btn {
+  color: rgb(252, 247, 247);
+  background-color: #ab7442;
+}
+
+.right-btn:hover {
+  color: rgb(12, 12, 12);
+  background-color: lightgray;
+}
+.btn {
+  padding: 25px;
+  margin: 10px 10px 70px 10px;
+  border: none;
+  border-radius: 0px;
+  width: 160px;
+  font-weight: bold;
+}
+/* serivices 2 card */
+.services-2 {
+  padding: 32px;
+}
+.services-2 > h1 {
+  padding: 32px;
+  margin: 32px;
+  text-align: center;
+}
+.services-2-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.services-2-card {
+  width: 22rem;
+  /* border: 2px solid red; */
+  text-align: center;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  overflow: hidden;
+  animation-name: image-scaling;
+  /* animation-timeline: view(); */
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+.services-2-content {
+  padding: 16px;
+}
+.services-2-content > a {
+  margin: 18px;
+  color: #ab7442;
+  text-decoration: none;
+}
+.services-2-img {
+  background-image: url("./assests/portfolio-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* or specific width like 300px */
+  height: 200px; /* or any appropriate height */
+  /* border-radius: 12px 12px 0px 0px; */
+  transition: width 0.3s;
+}
+.services-2-img:hover {
+  width: 110%;
+}
+@keyframes image-scaling {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/* Animation delay for each card */
+.card-1 {
+  animation-delay: 0s; /* No delay */
+}
+
+.card-2 {
+  animation-delay: 0.3s; /* Delayed by 0.3 seconds */
+}
+
+.card-3 {
+  animation-delay: 0.6s; /* Delayed by 0.6 seconds */
 }
