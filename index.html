@@ -267,6 +267,183 @@
         </div>
       </div>
     </section>
+
+    <!-- why choose us  -->
+
+    <div class="about-final">
+      <div class="about-right service-left">
+        <h1>Why Choose Us_</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+          corporis voluptate esse consectetur neque nulla incidunt iusto
+          adipisci aliquid.
+        </p>
+        <div class="about-content">
+          <div class="about-content">
+            <i class="fa fa-users first-icon about-ic"></i>
+            <div class="about-digit">
+              <h3 class="digit">1234</h3>
+              <p>Customer Services</p>
+            </div>
+          </div>
+          <div class="about-content">
+            <i class="fa fa-check first-icon about-ic"></i>
+            <div class="about-digit">
+              <h3 class="digit">1234</h3>
+              <p>Customer Services</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-left">
+          <div class="about-content">
+            <div class="about-content">
+              <i class="fa fa-users first-icon about-ic"></i>
+              <div class="about-digit">
+                <h3 class="digit">1234</h3>
+                <p>Customer Services</p>
+              </div>
+            </div>
+            <div class="about-content">
+              <i class="fa fa-check first-icon about-ic"></i>
+              <div class="about-digit">
+                <h3 class="digit">1234</h3>
+                <p>Customer Services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-left services-right"></div>
+    </div>
+    
+    <!-- our projects -->
+
+    <section class="project-2">
+      <h1>__ OUR PROJECTS __</h1>
+      <div class="project-2-container">
+        <div class="project-2-card card-1">
+          <i class="fa-solid fa-eye icon1"></i>
+          <i class="fa-solid fa-link icon2"></i>
+          <div class="project-2-img"></div>
+          <div class="services-2-content">
+            <p>General Carpentery</p>
+            <h2>Wooden Furniture Manufacturing And Remodeling</h2>
+          </div>
+        </div>
+        <div class="project-2-card card-2">
+          <i class="fa-solid fa-eye icon1"></i>
+          <i class="fa-solid fa-link icon2"></i>
+          <div class="project-2-img"></div>
+          <div class="services-2-content">
+            <p>General Carpentery</p>
+            <h2>Wooden Furniture Manufacturing And Remodeling</h2>
+          </div>
+        </div>
+        <div class="project-2-card card-3">
+          <i class="fa-solid fa-eye icon1"></i>
+          <i class="fa-solid fa-link icon2"></i>
+          <div class="project-2-img"></div>
+          <div class="services-2-content">
+            <p>General Carpentery</p>
+            <h2>Wooden Furniture Manufacturing And Remodeling</h2>
+          </div>
+        </div>
+        <div class="project-2-card card-4">
+          <i class="fa-solid fa-eye icon1"></i>
+          <i class="fa-solid fa-link icon2"></i>
+          <div class="project-2-img"></div>
+          <div class="services-2-content">
+            <p>General Carpentery</p>
+            <h2>Wooden Furniture Manufacturing And Remodeling</h2>
+          </div>
+        </div>
+        <div class="project-2-card card-5">
+          <i class="fa-solid fa-eye icon1"></i>
+          <i class="fa-solid fa-link icon2"></i>
+          <div class="project-2-img"></div>
+          <div class="services-2-content">
+            <p>General Carpentery</p>
+            <h2>Wooden Furniture Manufacturing And Remodeling</h2>
+          </div>
+        </div>
+        <div class="project-2-card card-6">
+          <i class="fa-solid fa-eye icon1"></i>
+          <i class="fa-solid fa-link icon2"></i>
+          <div class="project-2-img"></div>
+          <div class="services-2-content projects">
+            <p>General Carpentery</p>
+            <h2>Wooden Furniture Manufacturing And Remodeling</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- about form section -->
+
+<div class="about-final">
+  <div class="about-left project-left"></div>
+  <div class="about-right project-right">
+    <h1>Free Quote_</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+      corporis voluptate esse consectetur neque nulla incidunt iusto
+      adipisci aliquid.
+    </p>
+    <form action="" class="form">
+      <div class="small-item">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="foot-input form-input"
+        />
+      </div>
+      <div class="small-item">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="foot-input form-input"
+        />
+      </div>
+      <div class="small-item">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="foot-input form-input"
+        />
+      </div>
+
+      <div class="small-item">
+        <select
+          name="services"
+          id="s1"
+          class="foot-input form-input select-fo"
+        >
+          <option value="" selected>Select a service</option>
+          <option value="">Select a service</option>
+          <option value="">Select a service</option>
+          <option value="">Select a service</option>
+          <option value="">Select a service</option>
+        </select>
+      </div>
+
+      <div class="form-input">
+        <textarea
+          name=""
+          class="form-input large-item"
+          id=""
+          cols="46"
+          rows="3"
+          placeholder="Special Note"
+        ></textarea>
+      </div>
+      <div>
+        <button class="btn right-btn from-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+</section>
+
     <script>
       let slideIndex = 1;
       showSlides(slideIndex);
@@ -308,6 +485,7 @@
         console.log(scrollTop, "check scroll");
         // If scrolling down, hide the navbar
         if (scrollTop > lastScrollTop) {
+          lastScrollTop = scrollTop;
           navbar.classList.add("visible");
           navbar.classList.remove("hidden");
           navbar.classList.add("nav-fix");

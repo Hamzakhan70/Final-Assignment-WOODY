@@ -517,7 +517,7 @@ select {
 }
 /* serivices 2 card */
 .services-2 {
-  padding: 32px;
+  padding: 92px;
 }
 .services-2 > h1 {
   padding: 32px;
@@ -527,10 +527,13 @@ select {
 .services-2-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: row;
   gap: 3rem;
+  /* position: absolute; */
 }
 .services-2-card {
+  position: relative;
   width: 22rem;
   /* border: 2px solid red; */
   text-align: center;
@@ -555,20 +558,24 @@ select {
   background-size: cover;
   width: 100%; /* or specific width like 300px */
   height: 200px; /* or any appropriate height */
-  /* border-radius: 12px 12px 0px 0px; */
   transition: width 0.3s;
 }
-.services-2-img:hover {
+.services-2-card:hover .services-2-img {
   width: 110%;
 }
+
+/* animation for service cards when load  */
+
 @keyframes image-scaling {
   from {
     transform: translateY(30%);
     opacity: 0;
+    scale: 0;
   }
   to {
     transform: translateY(0%);
     opacity: 1;
+    scale: 1;
   }
 }
 /* Animation delay for each card */
@@ -582,4 +589,188 @@ select {
 
 .card-3 {
   animation-delay: 0.6s; /* Delayed by 0.6 seconds */
+}
+
+/* project section  */
+.project-2 {
+  text-align: center;
+  margin: 32px;
+}
+.project-2-container {
+  /* border: 2px solid red; */
+  padding: 79px;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 6px; */
+  justify-content: space-between;
+}
+.project-2-card {
+  width: 22rem;
+  /* border: 2px solid yellow; */
+  margin: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  margin-bottom: 12px;
+}
+.project-2-img {
+  background-image: url("./assests/portfolio-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* or specific width like 300px */
+  height: 200px; /* or any appropriate height */
+  transition: width 0.3s;
+}
+
+.project-2-card:hover .project-2-img {
+  width: 110%;
+}
+.project-2-card:hover .icon1 {
+  display: block;
+  animation-name: icon-up;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; /* Retain the final position */
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-2-card:hover .icon2 {
+  display: block;
+  animation-name: icon-up2;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; /* Retain the final position */
+  left: 51%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+}
+.icon1 {
+  position: absolute;
+  transform: translateY(175px);
+  background-color: rgb(71, 67, 67);
+  opacity: 0.7;
+  width: 1%;
+  height: 1%;
+  color: rgb(250, 250, 250);
+  border: 2px solid white;
+  padding: 22px;
+  margin: 12px;
+  /* display: none; */
+  visibility: hidden;
+  text-align: center;
+  left: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon2 {
+  position: absolute;
+  transform: translateY(175px);
+  /* transform: translateX(175px); */
+  background-color: rgb(71, 67, 67);
+  opacity: 0.7;
+  width: 1%;
+  height: 1%;
+  color: rgb(250, 250, 250);
+  border: 2px solid white;
+  padding: 22px;
+  margin: 12px;
+  display: none;
+  text-align: center;
+  left: 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+/* animation for icon on project bar*/
+
+@keyframes icon-up {
+  from {
+    transform: translateY(175px) scale(0.1, 0.1);
+  }
+  to {
+    transform: translateY(60px) scale(1, 1);
+  }
+}
+@keyframes icon-up2 {
+  from {
+    transform: translateY(175px) scale(0.1, 0.1);
+  }
+  to {
+    transform: translateY(60px) scale(1, 1);
+  }
+}
+
+.projects-content {
+  text-align: left;
+  align-items: flex-start;
+}
+.project-2-img {
+  position: relative; /* Position relative to contain the overlay */
+  background-image: url("./assests/portfolio-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* Full width */
+  height: 200px; /* Appropriate height */
+  transition: width 0.3s; /* Transition for width */
+}
+
+/* Overlay style */
+
+.project-2-img::before {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute; /* Position it over the image */
+  top: 0; /* Cover the top */
+  left: 0; /* Cover the left */
+  right: 0; /* Cover the right */
+  bottom: 0; /* Cover the bottom */
+  background-color: rgba(
+    71,
+    67,
+    67,
+    0.7
+  ); /* Semi-transparent background color */
+  opacity: 0; /* Start as invisible */
+  transform: translateY(175px); /* Start position for animation */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+  z-index: 1; /* Ensure it's above the image */
+}
+
+/* Show overlay on hover */
+.project-2-card:hover .project-2-img::before {
+  opacity: 1; /* Fully visible on hover */
+  transform: translateY(0); /* Move to original position on hover */
+}
+
+/* Adjust the icon styles if necessary */
+.icon1,
+.icon2 {
+  z-index: 2; /* Ensure icons are above the overlay */
+}
+
+/* about form input */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.foot-input {
+  padding: 17px;
+  position: relative;
+}
+.form-input {
+  border: none;
+}
+.select-fo {
+  background: white;
+  width: 206px;
+}
+.large-item {
+  padding: 25px;
 }
