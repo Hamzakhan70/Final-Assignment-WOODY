@@ -54,19 +54,6 @@ body {
 /* navbar */
 
 /* Hero Section */
-/* .hero {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  align-items: center;
-  padding-left: 3rem;
-  position: sticky;
-  z-index: 11;
-  top: 0px;
-  width: 100%;
-  box-shadow: 5px 5px 5px rgb(133, 131, 131);
-  animation-name: navbar-sticky;
-} */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -138,7 +125,7 @@ select {
   margin-left: 6px;
 }
 
-/* dropdown */
+/* -------------- dropdown --------------*/
 
 .dropbtn {
   color: black;
@@ -182,9 +169,10 @@ select {
   transition: all 0.5s ease; /* Transition duration and easing effect */
 }
 
-/* ---dropdown end*/
+/*  ---dropdown end------ */
 
 /* slider section start */
+
 .slider {
   color: rgb(15, 15, 15);
   text-align: center;
@@ -276,10 +264,12 @@ select {
 
 .mySlides {
   display: none;
+  transition: 1s;
 }
 .mySlides > img {
   /* vertical-align: middle; */
   height: 642px;
+  transition: 1s;
 }
 
 /* Slideshow container */
@@ -323,34 +313,10 @@ select {
   right: 40%;
   border-radius: 3px 0 0 3px;
 }
-/* .arrows {
-  right: 39%;
-  bottom: 12px;
-} */
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -721,7 +687,7 @@ select {
   transition: width 0.3s; /* Transition for width */
 }
 
-/* Overlay style */
+/*--------------- Overlay style ------------------*/
 
 .project-2-img::before {
   content: ""; /* Required for the pseudo-element */
@@ -773,4 +739,156 @@ select {
 }
 .large-item {
   padding: 25px;
+}
+
+/* team member section */
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 79px;
+  text-align: center;
+  gap: 18px;
+  /* position: relative; */
+}
+.team-card {
+  width: 73rem;
+  box-shadow: 5px 5px 5px rgb(133, 131, 131);
+  overflow: hidden;
+  position: relative;
+}
+.team-card:hover .team-img {
+  width: 120%;
+}
+.team-img {
+  position: relative; /* Position relative to contain the overlay */
+  /* background-image: url("./assests/team-1.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* Full width */
+  height: 300px; /* Appropriate height */
+  transition: width 0.3s; /* Transition for width */
+}
+.team-social a,
+ul {
+  /* display: none; */
+  visibility: hidden;
+  background-color: white;
+  color: #ab7442;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.5s; /* Transition for width */
+}
+.team-card:hover .team-social a,
+ul {
+  visibility: visible;
+  display: block;
+  background-color: #ab7442;
+  color: white;
+  opacity: 1;
+}
+.team-social-icon {
+  position: absolute;
+  z-index: 1;
+  padding: 12px;
+  display: flex;
+}
+.team-img1 {
+  background-image: url("./assests/team-1.jpg");
+}
+.team-img2 {
+  background-image: url("./assests/team-2.jpg");
+}
+.team-img3 {
+  background-image: url("./assests/team-3.jpg");
+}
+.team-img4 {
+  background-image: url("./assests/team-4.jpg");
+}
+.social1 {
+  top: 32%;
+  width: 38px;
+}
+
+.social3 {
+  top: 21%;
+}
+.social4 {
+  top: 10%;
+}
+
+/* -------footer-------- */
+
+/* --------------------footer------- */
+.footer {
+  padding: 30px;
+  background-color: #2c2a2a;
+  color: white;
+}
+
+.footer-content {
+  padding: 50px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  /* flex-basis: 390px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.address-1,
+.address-2,
+.address-3,
+.address-4 {
+  padding: 5px;
+}
+
+.for-icon {
+  margin: 12px;
+}
+
+.foot-icon {
+  padding: 10px;
+  margin: 4px;
+  border: 2px solid white;
+
+  color: white;
+}
+
+.foot-input {
+  padding: 17px;
+  position: relative;
+}
+
+.foot-btn {
+  padding: 12px;
+  position: absolute;
+  top: 97px;
+  right: 86px;
+  border: #ab7442;
+}
+
+.last {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.last a {
+  list-style-type: none;
+  color: white;
+}
+.fa-angle-right {
+  font-size: 12px;
+  margin-right: 6px;
+}
+.address-icons {
+  font-size: 15px;
+  margin-right: 15px;
+}
+.footer-content h2 {
+  margin-bottom: 25px;
 }
